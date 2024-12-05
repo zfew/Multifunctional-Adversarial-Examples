@@ -9,8 +9,7 @@ class ChannelAttention(nn.Module):
         self.max_pool = nn.AdaptiveMaxPool2d(1)   
         self.fc = nn.Sequential(
             nn.Linear(channel, channel // reduction, bias=False),
-            nn.ReLU(inplace=True),
-            # nn.Dropout(p=0.4),
+            ,
             nn.Linear(channel // reduction, channel, bias=False)  
         )
 
